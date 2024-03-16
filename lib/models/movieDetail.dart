@@ -1,8 +1,8 @@
 class MovieDetail {
   final String title;
-  final int vote_average;
+  final String vote_average;
   final List<Genre> genres;
-  final int runtime;
+  final String runtime;
   final String overview;
 
   MovieDetail.fromJson(Map<String, dynamic> json)

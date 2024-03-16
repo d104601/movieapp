@@ -57,15 +57,15 @@ class ApiService {
     }
   }
 
-  static Future<dynamic> getMovieDetail(int id) async {
-    final query = Uri(queryParameters: {'id': id.toString()});
-    final url = Uri.parse('$_baseUrl/movie?$query');
-    final response = await http.get(url);
-    final body = json.decode(response.body);
-    if(response.statusCode == 200) {
-      return body;
-    } else {
-      throw Exception('Failed to load data');
-    }
-  }
+  // static Future<dynamic> getMovieDetail(int id) async {
+  //   final query = Uri(queryParameters: {'id': id.toString()});
+  //   final url = Uri.parse('$_baseUrl/movie?$query');
+  //   final response = await http.get(url);
+  //   final body = json.decode(response.body);
+  //   if(response.statusCode == 200) {
+  //     return body;
+  //   } else {
+  //     throw Exception('Failed to load data');
+  //   }
+  // }
 }

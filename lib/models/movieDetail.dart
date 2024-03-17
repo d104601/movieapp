@@ -1,16 +1,18 @@
 class MovieDetail {
   final String title;
-  final String vote_average;
+  final double vote_average;
   final List<Genre> genres;
-  final String runtime;
+  final int runtime;
   final String overview;
+  final String homepage;
 
   MovieDetail.fromJson(Map<String, dynamic> json)
       : title = json['title'],
         vote_average = json['vote_average'],
         genres = (json['genres'] as List).map((e) => Genre.fromJson(e)).toList(),
         runtime = json['runtime'],
-        overview = json['overview'];
+        overview = json['overview'],
+        homepage = json['homepage'];
 }
 
 class Genre {
